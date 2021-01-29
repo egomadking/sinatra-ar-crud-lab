@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="UTF-8">
+
+    <title>TITLE</title>
+
+  </head>
+
+  <body>
+  <h1>All articles</h1>
+  <% @articles.each do |article| %>
+  <h2><%= article[:title] %></h2>
+  <p><%= article[:content] %></p>
+  <a href="/articles/<%= article[:id] %>">Direct link to article...</a>
+  <% end %>
+  </body>
+
+</html>
